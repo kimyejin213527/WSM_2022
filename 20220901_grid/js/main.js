@@ -1,4 +1,4 @@
-//현재 년 월 일 알아내자
+//현재 년 월 일 알아내즈아
 let today = new Date();
 
 year = today.getFullYear();
