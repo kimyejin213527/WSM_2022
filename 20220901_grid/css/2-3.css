@@ -1,0 +1,87 @@
+h1 {
+    color: rgb(197, 51, 51);
+    text-align: center;
+    padding: 30px;
+    max-width: 800px;
+    /* width 앞에 max 붙이면 반응형 됨 */
+}
+
+.grid-container {
+    color: rgb(255, 97, 97);
+    display: grid;
+    grid-template-columns: 80px repeat(5, 1fr);
+    max-width: 800px;
+    /* width 앞에 max 붙이면 반응형 됨 */
+    height: 400px;
+}
+
+.days-of-the-week {
+    background-color: rgb(255, 143, 131);
+    color: rgb(255, 255, 255);
+}
+
+.period {
+    color: white;
+    background-color: rgb(255, 143, 131);
+}
+
+.grid-item {
+    border: 1px solid rgb(255, 97, 97);
+    display: flex;
+    justify-content: center;
+    /* 위에서 센터 */
+    align-items: center;
+    /* 중앙으로 배치 */
+}
+
+.grid-item:nth-child(1) {
+    border: none;
+}
+
+.grid-item:nth-child(11) {
+    /* php */
+    grid-row: 2/4;
+    grid-column: 5/6;
+}
+
+.grid-item:nth-child(19) {
+    /* wsm */
+    grid-row: 4/6;
+    grid-column: 2/3;
+}
+
+.grid-item:nth-child(21) {
+    /* wsm */
+    grid-row: 4/6;
+    grid-column: 4/5;
+}
+
+.grid-item:nth-child(22) {
+    /* 코테 */
+    grid-row: 4/6;
+    grid-column: 5/6;
+}
+
+.grid-item:nth-child(28) {
+    /* java */
+    grid-row: 6/8;
+    grid-column: 2/3;
+}
+
+.grid-item:nth-child(29) {
+    /* 자료구조*/
+    grid-row: 6/8;
+    grid-column: 3/4;
+}
+
+.grid-item:nth-child(32) {
+    /* JS, AI*/
+    grid-row: 6/8;
+    grid-column: 6/7;
+}
+
+.grid-item:nth-child(34) {
+    /* 창체*/
+    grid-row: 7/9;
+    grid-column: 4/5;
+}
