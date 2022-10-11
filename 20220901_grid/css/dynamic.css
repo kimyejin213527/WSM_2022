@@ -6,7 +6,7 @@
 
 #prev_btn,
 #next_btn {
-    border: 2px solid #eee;
+    border: 2px solid rgb(208, 208, 208);
     border-radius: 8px;
     padding: 8px;
 }
@@ -27,4 +27,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.menu-grid-container {
+    display: grid;
+    grid-template-rows: repeat(3, minmax(min-content, max-content));
+    row-gap: 20px;
+    padding: 20px;
+}
+
+.breakfast,
+.lunch,
+.dinner {
+    width: 180px;
+    border-radius: 8px;
+    background-color: beige;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 1.25rem;
 }
