@@ -40,7 +40,7 @@ main {
 
 .date-grid-container .grid-item:hover {
     border-radius: 10px;
-    background-color: rgb(129, 145, 199);
+    background-color: rgb(134, 166, 221);
     cursor: pointer;
 }
 
