@@ -87,33 +87,33 @@ const urlToJSON = (url) => {
                     breakfastData = breakfastData.replace(/\([0-9\.]*\)/g, ""); // 정규표현식: (문자 숫자나, 문자) 문자
                     breakfast.innerHTML = breakfastData;
                 } catch {
-                    breakfast.innerHTML = "없응"
+                    breakfast.innerHTML = "없음"
                 }
                 try {
                     let lunchData = json['mealServiceDietInfo'][1]['row'][1]['DDISH_NM']; //중식
                     lunchData = lunchData.replace(/\([0123456789\.]*\)/g, "");
                     lunch.innerHTML = lunchData;
                 } catch {
-                    lunch.innerHTML = "없응"
+                    lunch.innerHTML = "없음"
                 }
                 try {
                     let dinnerData = json['mealServiceDietInfo'][1]['row'][2]['DDISH_NM']; //중식
                     dinnerData = dinnerData.replace(/\([0123456789\.]*\)/g, "");
                     dinner.innerHTML = dinnerData;
                 } catch {
-                    dinner.innerHTML = "없응"
+                    dinner.innerHTML = "없음"
                 }
             } else {
                 //응답이 이상하면
                 //없음 표시하자
-                breakfast.innerHTML = " 없응";
-                lunch.innerHTML = " 없응";
-                dinner.innerHTML = " 없응";
+                breakfast.innerHTML = " 없음";
+                lunch.innerHTML = " 없음";
+                dinner.innerHTML = " 없음";
             }
         } catch { //문제가 생기면 {'RESULT':}
-            breakfast.innerHTML = " 없응";
-            lunch.innerHTML = " 없응";
-            dinner.innerHTML = " 없응";
+            breakfast.innerHTML = " 없음";
+            lunch.innerHTML = " 없음";
+            dinner.innerHTML = " 없음";
         }
     }
 
