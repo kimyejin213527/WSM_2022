@@ -82,17 +82,24 @@ const urlToJSON = (url) => {
                 //응답이 제대로 왔으면
                 //json -> HTML
                 try {
-                    breakfast.innerHTML = json['mealServiceDietInfo'][1]['row'][0]['DDISH_NM']; //조식
+                    let breakfastData = json['mealServiceDietInfo'][1]['row'][0]['DDISH_NM']; //조식
+                    //(5.13.) 삭제하자
+                    breakfastData = breakfastData.replace(/\([0-9\.]*\)/g, ""); // 정규표현식: (문자 숫자나, 문자) 문자
+                    breakfast.innerHTML = breakfastData;
                 } catch {
                     breakfast.innerHTML = "없응"
                 }
                 try {
-                    lunch.innerHTML = json['mealServiceDietInfo'][1]['row'][1]['DDISH_NM']; //중식
+                    let lunchData = json['mealServiceDietInfo'][1]['row'][1]['DDISH_NM']; //중식
+                    lunchData = lunchData.replace(/\([0123456789\.]*\)/g, "");
+                    lunch.innerHTML = lunchData;
                 } catch {
                     lunch.innerHTML = "없응"
                 }
                 try {
-                    dinner.innerHTML = json['mealServiceDietInfo'][1]['row'][2]['DDISH_NM']; //중식
+                    let dinnerData = json['mealServiceDietInfo'][1]['row'][2]['DDISH_NM']; //중식
+                    dinnerData = dinnerData.replace(/\([0123456789\.]*\)/g, "");
+                    dinner.innerHTML = dinnerData;
                 } catch {
                     dinner.innerHTML = "없응"
                 }
