@@ -6,7 +6,8 @@
     display: grid;
     /* grid-template-columns: 1fr 3fr 1fr; */
     grid-template-areas:
-        "sidebar main nav";
+        "header header  header"
+        "nav    main    sidebar";
 }
 
 .nav {
@@ -19,4 +20,12 @@ main {
 
 .sidebar {
     grid-area: sidebar;
+}
+
+header {
+    grid-area: header;
+}
+
+footer {
+    display: none;
 }
